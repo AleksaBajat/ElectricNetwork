@@ -1,0 +1,46 @@
+﻿<Window x:Class="ElectroNetwork.EllipsePropertiesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:ElectroNetwork"
+        mc:Ignorable="d"
+        Title="EllipsePropertiesWindow" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Label Content="Ellipse Width" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding EllipseWidth, Mode=TwoWay}"></TextBox>
+        <Label Grid.Row="1" Content="Ellipse Height" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding EllipseHeight, Mode=TwoWay}"></TextBox>
+        <Label Grid.Row="2" Content="Ellipse Thickness" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Thickness}"></TextBox>
+        <Label Grid.Row="3" Content="Ellipse Color" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <ComboBox Grid.Row="3" Grid.Column="1" x:Name="ColorPicker" SelectionChanged="ColorPicker_OnSelectionChanged"></ComboBox>
+        <Label Grid.Row="4" Content="Ellipse Stroke Color" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <ComboBox Grid.Row="4" Grid.Column="1" x:Name="ColorPickerStroke" SelectionChanged="ColorPickerStroke_OnSelectionChanged"></ComboBox>
+        <Label Grid.Row="5" Content="Ellipse Opacity" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding EllipseOpacity, Mode=TwoWay}"></TextBox>
+        <Label Grid.Row="6" Content="Ellipse Text" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <TextBox Grid.Row="6" Width="250" Grid.Column="1" Text="{Binding Text, Mode=TwoWay}"></TextBox>
+        <Label Grid.Row="7" Content="Ellipse Text Color" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <ComboBox Grid.Row="7" Grid.Column="1" x:Name="ColorPickerText" SelectionChanged="ColorPickerText_OnSelectionChanged"></ComboBox>
+        <Button Grid.Row="8" Grid.ColumnSpan="1" FontSize="25" Click="Add_OnClick">Add Ellipse</Button>
+        <Button Grid.Row="8" Grid.ColumnSpan="1" Grid.Column="1" FontSize="25" Click="Cancel_OnClick">Cancel</Button>
+    </Grid>
+</Window>
